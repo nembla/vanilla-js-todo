@@ -1,0 +1,12 @@
+html {
+    font-family: 'Raleway', sans-serif;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    min-width: 100vw;
+    justify-content: center;
+    margin-top: 2em;
+}

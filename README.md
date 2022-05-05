@@ -1,0 +1,1 @@
+This is a todo list built with good ol' vanilla javascript!
