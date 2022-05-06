@@ -48,3 +48,51 @@ input[type="text"] {
     color: #595959;
     flex-grow: 1;
 }
+
+button {
+    font-size: 1.5rem;
+    background-color: #FFFFFF;
+    outline: 0;
+    border: none;
+    color: #595959;
+}
+
+button:hover {
+    color: lightcoral;
+    cursor: pointer;
+    
+}
+
+.todoList {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    margin-top: 20px;
+    padding: 10px 25px;
+    height: 100%;
+}
+
+ul {
+    padding-left: 0px;
+    list-style: none;   
+}
+
+li {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid lightgrey;
+    padding: 15px 0;
+    font-size: 1rem;
+    color: #595959;
+}
+
+.clearAll {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 3px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.clearAll:hover {
+    color: lightcoral;
+}
