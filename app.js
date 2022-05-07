@@ -1,7 +1,7 @@
 //Selectors
 document.querySelector('form').addEventListener('submit', handleSubmitForm);
 document.querySelector('ul').addEventListener('click', handleClick);
-document.getElementById('clearAll').addEventListener('click', handleClearAll)
+document.getElementById('clearAll').addEventListener('click', handleClearAll);
 
 
 // Event Handler Functions
@@ -48,8 +48,12 @@ function addTodo(todo) {
 
 function checkTodo(e) {
     let item = e.target.parentNode;
-    console.log(item);
-    item.style.textDecoration == "line-through";
+    if (item.style.textDecoration == 'line-through') {
+        item.style.textDecoration = 'none';
+    }
+    else {
+        item.style.textDecoration = 'line-through';
+    }
 };
 
 function deleteTodo(e) {
