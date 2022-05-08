@@ -67,5 +67,6 @@ function deleteTodo(e) {
 };
 
 function editTodo(e) {
+    let item = e.target.parentNode;
 
 };
