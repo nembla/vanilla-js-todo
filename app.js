@@ -21,14 +21,12 @@ function handleClick(e) {
     if (e.target.name == "deleteButton") {
         deleteTodo(e);
     }
-    if (e.target.name == "editButton") {
-        editTodo(e);
-    }
 };
 
 function handleClearAll(e) {
     document.querySelector('ul').innerHTML = '';
 }
+
 
 // Helpers
 function addTodo(todo) {
@@ -38,7 +36,6 @@ function addTodo(todo) {
     li.innerHTML = `
         <span class='todo-item'>${todo}</span>
         <button name="checkButton"><i class="fas fa-check-square"></i></button>
-        <button name="editButton"><i class="fa-solid fa-pen"></i></button>
         <button name="deleteButton"><i class="fas fa-trash"></i></button>
     `;
 
@@ -64,9 +61,4 @@ function deleteTodo(e) {
     });
 
     item.classList.add('todo-list-item-fall');
-};
-
-function editTodo(e) {
-    let item = e.target.parentNode;
-
 };
