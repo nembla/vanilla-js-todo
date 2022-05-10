@@ -21,6 +21,12 @@ function handleClick(e) {
     if (e.target.name == "deleteButton") {
         deleteTodo(e);
     }
+    if (e.target.name == "editButton") {
+        editTodo(e);
+    }
+    if (e.target.name == "completeEdit") {
+        completeEdit(e);
+    }
 };
 
 function handleClearAll(e) {
@@ -36,6 +42,7 @@ function addTodo(todo) {
     li.innerHTML = `
         <span class='todo-item'>${todo}</span>
         <button name="checkButton"><i class="fas fa-check-square"></i></button>
+        <button name="editButton"><i class="fas fa-pencil"></i></button>
         <button name="deleteButton"><i class="fas fa-trash"></i></button>
     `;
 
@@ -62,3 +69,48 @@ function deleteTodo(e) {
 
     item.classList.add('todo-list-item-fall');
 };
+
+function editTodo(e) {
+    let item = e.target.parentNode;
+    let todoEdit = item.children[0];
+    let checkButton = item.children[1];
+    let editButton = item.children[2];
+    let deleteButton = item.children[3];
+
+
+    let newEditBtn = document.createElement('button')
+    item.appendChild(newEditBtn);
+    newEditBtn.innerHTML = `
+    <i class="fa-solid fa-check-double"></i>
+    `;
+    newEditBtn.name = 'completeEdit';
+
+    todoEdit.contentEditable = true;
+    editButton.setAttribute('disabled', 'disabled');
+    checkButton.setAttribute('disabled', 'disabled');
+    deleteButton.setAttribute('disabled', 'disabled');
+
+    checkButton.style.opacity = '50%';
+    deleteButton.style.opacity = '50%';
+    editButton.style.opacity = '50%';
+}
+
+function completeEdit(e) {
+    let item = e.target.parentNode;
+    let todoEdit = item.children[0];
+    let checkButton = item.children[1];
+    let editButton = item.children[2];
+    let deleteButton = item.children[3];
+    let newEditBtn = item.children[4];
+
+    todoEdit.contentEditable = false;
+    newEditBtn.remove();
+
+    deleteButton.removeAttribute('disabled', 'disabled');
+    editButton.removeAttribute('disabled', 'disabled');
+    checkButton.removeAttribute('disabled', 'disabled');
+
+    checkButton.style.opacity = '100%';
+    deleteButton.style.opacity = '100%';
+    editButton.style.opacity = '100%';
+}
