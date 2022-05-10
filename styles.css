@@ -1,7 +1,8 @@
 html {
     height: 100vh;
     min-width: 600px;
-    background-image: linear-gradient(130deg, #FFFFFF, #1C3F80);
+    /* background-image: linear-gradient(130deg, white, purple); */
+    background-color: whitesmoke;
     background-repeat: no-repeat;
     background-size: auto;
 }
@@ -58,7 +59,7 @@ button {
 }
 
 button:hover {
-    color: lightcoral;
+    color: grey;
     cursor: pointer;
     
 }
@@ -87,6 +88,7 @@ li {
 
 .todo-item {
     flex-grow: 1;
+    padding: 5px;
 }
 
 .clearAll {
@@ -98,7 +100,7 @@ li {
 }
 
 .clearAll:hover {
-    color: lightcoral;
+    color: grey;
 }
 
 i {
@@ -110,7 +112,7 @@ i {
 }
 
 .todo-list-item-fall {
-    transform: translateY(12rem) rotateZ(10deg);
+    transform: translateY(12rem);
     opacity: 0;
 
 }

@@ -88,6 +88,9 @@ function editTodo(e) {
     `;
     newEditBtn.name = 'completeEdit';
 
+
+    todoEdit.style.border = '1px solid black';
+    todoEdit.style.borderRadius = '8px';
     todoEdit.contentEditable = true;
     editButton.setAttribute('disabled', 'disabled');
     checkButton.setAttribute('disabled', 'disabled');
@@ -116,4 +119,7 @@ function completeEdit(e) {
     checkButton.style.opacity = '100%';
     deleteButton.style.opacity = '100%';
     editButton.style.opacity = '100%';
+
+    todoEdit.style.border = 'none';
+    todoEdit.style.borderRadius = '0';
 }
