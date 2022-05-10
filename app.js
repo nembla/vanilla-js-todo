@@ -52,11 +52,14 @@ function addTodo(todo) {
 
 function checkTodo(e) {
     let item = e.target.parentNode;
+    let todoEdit = item.children[0];
     if (item.style.textDecoration == 'line-through') {
         item.style.textDecoration = 'none';
+        todoEdit.style.opacity = '100%';
     }
     else {
         item.style.textDecoration = 'line-through';
+        todoEdit.style.opacity = '50%';
     }
 };
 
