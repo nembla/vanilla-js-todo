@@ -2,6 +2,7 @@
 document.querySelector('form').addEventListener('submit', handleSubmitForm);
 document.querySelector('ul').addEventListener('click', handleClick);
 document.getElementById('clearAll').addEventListener('click', handleClearAll);
+document.getElementById('mode').addEventListener('click', handleClick);
 
 
 // Event Handler Functions
@@ -26,6 +27,9 @@ function handleClick(e) {
     }
     if (e.target.name == "completeEdit") {
         completeEdit(e);
+    }
+    if (e.target.name == "mode") {
+        toggleMode(e);
     }
 };
 
@@ -122,4 +126,22 @@ function completeEdit(e) {
 
     todoEdit.style.border = 'none';
     todoEdit.style.borderRadius = '0';
+}
+
+function toggleMode(e) {
+    let mode = e.target.parentNode.parentNode.parentNode;
+    let btn = e.target;
+
+    if (btn.innerHTML === '<i class="fa-solid fa-sun"></i>') {
+        mode.classList.remove('darkMode');
+        btn.innerHTML = '<i class="fa-solid fa-moon"></i>';
+        return 0;
+    }
+    if (btn.innerHTML === '<i class="fa-solid fa-moon"></i>') {
+        mode.classList.add('darkMode');
+        btn.innerHTML = '<i class="fa-solid fa-sun"></i>';
+        return 0;
+    }
+
+
 }

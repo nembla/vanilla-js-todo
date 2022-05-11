@@ -1,7 +1,6 @@
 html {
     height: 100vh;
     min-width: 600px;
-    /* background-image: linear-gradient(130deg, white, purple); */
     background-color: whitesmoke;
     background-repeat: no-repeat;
     background-size: auto;
@@ -59,7 +58,7 @@ button {
 }
 
 button:hover {
-    color: grey;
+    color: #DB162F;
     cursor: pointer;
     
 }
@@ -100,7 +99,7 @@ li {
 }
 
 .clearAll:hover {
-    color: grey;
+    color: #DB162F;
 }
 
 i {
@@ -115,4 +114,22 @@ i {
     transform: translateY(12rem);
     opacity: 0;
 
+}
+
+.darkModeWrap {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.darkModeWrap button {
+    margin-left: auto;
+    background-color: whitesmoke;
+}
+
+.darkMode {
+    background-color: #212529;
+    color:white;
 }
