@@ -131,17 +131,21 @@ function completeEdit(e) {
 function toggleMode(e) {
     let mode = e.target.parentNode.parentNode.parentNode;
     let btn = e.target;
+    let clearAll = document.getElementById('clearAll');
 
     if (btn.innerHTML === '<i class="fa-solid fa-sun"></i>') {
         mode.classList.remove('darkMode');
         btn.innerHTML = '<i class="fa-solid fa-moon"></i>';
+        btn.style.color = '#595959';
+        btn.style.backgroundColor = 'whitesmoke';
         return 0;
     }
     if (btn.innerHTML === '<i class="fa-solid fa-moon"></i>') {
         mode.classList.add('darkMode');
         btn.innerHTML = '<i class="fa-solid fa-sun"></i>';
+        btn.style.color = 'white';
+        btn.style.backgroundColor = '#212529';
+        clearAll.style.color = 'black';
         return 0;
     }
-
-
 }

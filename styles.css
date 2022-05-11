@@ -124,7 +124,7 @@ i {
     padding-bottom: 0;
 }
 
-.darkModeWrap button {
+#mode {
     margin-left: auto;
     background-color: whitesmoke;
 }
