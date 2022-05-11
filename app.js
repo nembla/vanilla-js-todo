@@ -138,6 +138,7 @@ function toggleMode(e) {
         btn.innerHTML = '<i class="fa-solid fa-moon"></i>';
         btn.style.color = '#595959';
         btn.style.backgroundColor = 'whitesmoke';
+        btn.title = 'Light Mode';
         return 0;
     }
     if (btn.innerHTML === '<i class="fa-solid fa-moon"></i>') {
