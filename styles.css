@@ -58,7 +58,7 @@ button {
 }
 
 button:hover {
-    color: #DB162F;
+    color: #0096c7;
     cursor: pointer;
     
 }
@@ -99,7 +99,7 @@ li {
 }
 
 .clearAll:hover {
-    color: #DB162F;
+    color: #0096c7;
 }
 
 i {
